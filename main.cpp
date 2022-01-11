@@ -1,9 +1,8 @@
 #include "DB.h"
 
-#define DEBUG 
+
 int main()
 {
-#ifdef DEBUG
 	DB* db = new DB();
 	
 	db->open_db();
@@ -28,9 +27,7 @@ int main()
 		try
 		{
 			if (std::stoi(command)) {
-				//uint16_t fun_n = 0;
-				//std::cout << " Enter the number: ";
-				//std::cin >> fun_n;
+				
 				switch (std::stoi(command))
 				{
 				case 1:
@@ -81,11 +78,6 @@ int main()
 		}
 		
 	}
-#else
-	std::cout << " Enter str: ";
-	std::string str = "";
-	std::cin >> str;
-	std::cout << "\n" << std::stoi(str) << "\n";
+
 	return 1;
-#endif
 }
